@@ -1,0 +1,144 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font: 16px sans-serif;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  text-align: center;
+  background: lightslategray;
+  color: #fff;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 22px;
+  padding: 10px;
+}
+
+.poeni{
+  color:white;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 22px;
+  margin-top: -15px;
+  margin-bottom: -70px;
+  margin-left: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  }
+
+
+.igra-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+}
+.igra {
+  width: 800px;
+  height: 600px;
+  background: url(slike/background-blue.png);
+  animation: scroll-background 5s linear infinite;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+@keyframes scroll-background {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: 256px;
+  }
+}
+
+.igra .neprijatelj {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: -18px;
+  width: 40px;
+}
+
+.igra .igrac {
+  position: absolute;
+  margin-left: -30px;
+  width: 60px;
+}
+
+.igra .laser {
+  position: absolute;
+  margin-left: -2.5px;
+  height: 30px;
+}
+
+.igra .n-laser {
+  position: absolute;
+  margin-left: -2.5px;
+  height: 30px;
+}
+
+.pobeda {
+  display: none;
+  position: fixed;
+  top:30%;
+  left:40%;
+  z-index:999;
+  background: limegreen;
+  color: white;
+  padding: 20px 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  animation: pop-in 1s;
+}
+
+.kraj-igre {
+  display: none;
+  position: fixed;
+  top:30%;
+  left:40%;
+  z-index:999;
+  background: #6b1818;
+  color: white;
+  padding: 20px 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  animation: pop-in 1s;
+}
+
+.btn {
+  color:white;
+  border-radius: 8px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.15);
+  background-color: gray;
+  padding: 10px 40px;
+  font: 14px sans-serif;
+}
+
+
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translate(0, -100px);
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(0, 30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
